@@ -28,7 +28,7 @@ def get_info():
     tz = str(get_localzone().zone)
     uname_data.append(tz)
     uname_fields = ['sysname', 'nodename', 'release', 'version', 'machine', 'timezone']
-    results = dict(zip(unname_fields, uname_data))
+    results = dict(zip(uname_fields, uname_data))
     return jsonify(results)
 
 if __name__ == '__main__':

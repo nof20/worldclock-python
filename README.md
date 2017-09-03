@@ -2,7 +2,7 @@
 
 A simple Python/Flask app to test the process of building and deploying containers on Google Container Platform.
 
-The app itself exposes a simple REST API: GET `http://<hostname>/api/v1.0/time` returns the current time in seven different time zones, e.g.
+The app itself exposes a simple REST API to return the current time in seven different time zones, e.g.
 
 ```bash
 $ curl localhost:8080/api/v1.0/time
@@ -14,6 +14,20 @@ $ curl localhost:8080/api/v1.0/time
   "Singapore": "2017-09-04T06:46:29+0800",
   "US/Eastern": "2017-09-03T18:46:29-0400",
   "US/Pacific": "2017-09-03T15:46:29-0700"
+}
+```
+
+It also returns some simple info about the host the container is running on:
+
+```bash
+$ curl localhost:8080/api/v1.0/info
+{
+  "machine": "x86_64",
+  "nodename": "55b2aace560a",
+  "release": "4.9.41-moby",
+  "sysname": "Linux",
+  "timezone": "Etc/UTC",
+  "version": "#1 SMP Fri Aug 18 01:58:38 UTC 2017"
 }
 ```
 
