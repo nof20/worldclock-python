@@ -62,3 +62,5 @@ $ kubectl run worldclock-python --image=gcr.io/<project-id>/worldclock-python --
 $ kubectl expose deployment worldclock-python --type=“LoadBalancer"
 $ kubectl get service worldclock-python
 ```
+
+
